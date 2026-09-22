@@ -1,0 +1,29 @@
+{
+  "status": "STOPPED_DATA_GATE",
+  "target": "Weinreb et al. 2020 LARRY hematopoiesis",
+  "geo_accession": "GSE134242",
+  "attempted_sources": [
+    {
+      "source": "GEO GSE134242 supplementary directory",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE134242",
+      "local_verification": "Expression count TSV files are listed; no clone-assignment file is listed."
+    },
+    {
+      "source": "AllonKleinLab paper-data processed LARRY files",
+      "url": "https://github.com/AllonKleinLab/paper-data/tree/master/Lineage_tracing_on_transcriptional_landscapes_links_state_to_fate_during_differentiation",
+      "local_verification": "Clone matrix, metadata, and multiple timepoints are documented, but the in-vitro normalized matrix is approximately 1.97 GB compressed."
+    },
+    {
+      "source": "scDiffEq LARRY prepared H5AD",
+      "url": "https://figshare.com/articles/dataset/LARRY_LT-scRNA-seq_dataset_formatted_for_timepoint_recovery/23692095",
+      "local_verification": "Download endpoint was accessible but the prepared H5AD is approximately 2.78 GB; not processed within reasonable effort for this minimum run."
+    },
+    {
+      "source": "MEGATRON smaller LARRY subset",
+      "url": "https://github.com/pinellolab/MEGATRON",
+      "local_verification": "Notebook documents 3,221 cells and 365 clones, but the input files are behind a Mega folder and were not directly obtainable here."
+    }
+  ],
+  "experiment_run": false,
+  "reason": "Clone-resolved expression plus assignments could not be obtained and processed within reasonable effort."
+}
