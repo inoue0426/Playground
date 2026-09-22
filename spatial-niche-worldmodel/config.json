@@ -1,0 +1,73 @@
+{
+  "protocol": "A",
+  "dataset": "GSE284989, MC38 Visium, IgG versus aPD1",
+  "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE284989",
+  "seed": 67,
+  "sample_count": 22,
+  "control_sample_count": 11,
+  "treated_sample_count": 11,
+  "spots_total": 58287,
+  "genes_in_source_first_sample": 20551,
+  "hvg_count": 2000,
+  "k_neighbors": 6,
+  "mask_fraction": 0.2,
+  "heldout_treated_samples": [
+    "GSM8694502_MC38_aPD1_NR_m10",
+    "GSM8694507_MC38_aPD1_R_m15_sec1",
+    "GSM8694511_MC38_aPD1_R_m16_sec3"
+  ],
+  "train_samples": [
+    "GSM8694491_MC38_IgG_m01",
+    "GSM8694492_MC38_IgG_m02",
+    "GSM8694493_MC38_IgG_m03",
+    "GSM8694494_MC38_IgG_m04_sec1",
+    "GSM8694495_MC38_IgG_m04_sec2",
+    "GSM8694496_MC38_IgG_m04_sec3",
+    "GSM8694497_MC38_IgG_m05",
+    "GSM8694498_MC38_IgG_m06",
+    "GSM8694499_MC38_IgG_m07",
+    "GSM8694500_MC38_IgG_m08",
+    "GSM8694501_MC38_aPD1_NR_m09",
+    "GSM8694503_MC38_aPD1_NR_m11",
+    "GSM8694504_MC38_aPD1_NR_m12",
+    "GSM8694505_MC38_aPD1_NR_m13",
+    "GSM8694506_MC38_aPD1_NR_m14",
+    "GSM8694508_MC38_aPD1_R_m15_sec2",
+    "GSM8694509_MC38_aPD1_R_m16_sec1",
+    "GSM8694510_MC38_aPD1_R_m16_sec2",
+    "GSM8694512_MC38_IgG_m04_base_protocol"
+  ],
+  "model": {
+    "hidden_width": 32,
+    "epochs": 15,
+    "learning_rate": 0.002
+  },
+  "summary_metrics": {
+    "graph_conditioned": {
+      "mse": 2.4764816761016846,
+      "mae": 1.3178239663441975,
+      "cosine": 0.46510185798009235,
+      "de_gene_jaccard": 0.022332034387871947
+    },
+    "graph_unconditional": {
+      "mse": 2.5222597122192383,
+      "mae": 1.326846440633138,
+      "cosine": 0.37700851758321124,
+      "de_gene_jaccard": 0.02053295551625422
+    },
+    "mlp_no_graph": {
+      "mse": 2.5601231257120767,
+      "mae": 1.3401987155278523,
+      "cosine": 0.4002932906150818,
+      "de_gene_jaccard": 0.024041173152848278
+    },
+    "nearest_niche": {
+      "mse": 0.9712835450967153,
+      "mae": 0.678397665421168,
+      "cosine": 0.8135686119397482,
+      "de_gene_jaccard": 0.24196227710451948
+    }
+  },
+  "decision": "NO-GO",
+  "de_gene_definition": "top 100 absolute mean shifts versus unmasked spots; Jaccard"
+}
